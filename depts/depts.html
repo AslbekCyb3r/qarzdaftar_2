@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body class="bg-gray-300">
+
+    <div class=" p-4 m-4 h-162 flex gap-8">
+        <div class=" w-70 h-150 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% rounded-2xl">
+            <div>
+                <img src="../img/logo.png" alt="" class="w-40 h-40 m-auto mt-4 mb-4 rounded-full">
+            </div>
+
+            <!-- buttonlar qismi -->
+            <div class="p-4 space-y-4">
+                <button onclick="navigateToAdmin()"
+                    class="w-full py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition duration-300 shadow-md">admin</button>
+                <button onclick="navigateToClients()"
+                    class="w-full py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition duration-300 shadow-md">clients</button>
+                <button onclick="navigateTodepts()"
+                    class="w-full py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition duration-300 shadow-md">depts</button>
+                <button onclick="navigateTopayments()"
+                    class="w-full py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition duration-300 shadow-md">Payments</button>
+
+
+
+
+            </div>
+
+            <!-- end -->
+
+        </div>
+
+
+
+
+        <div>
+            <div class="flex justify-between m-auto  gap-158">
+                <h1 class="text-4xl font-bold text-left text-gray-800 mb-6 m-auto">Qarzlar bulimi</h1>
+                <div class="flex gap-2 justify-center  p-2 rounded-lg">
+                    <button class="w-[90px] py-2 rounded-lg bg-red-500 text-white text-[11px] font-semibold transform scale-100 hover:scale-105 hover:transition-all duration-200 ease-out shadow">
+                        Qarz berish
+                    </button>
+
+                    <button class="w-[90px] py-2 rounded-lg bg-green-500 text-white text-[11px] font-semibold transform scale-100 hover:scale-105 transition-all duration-200 ease-out shadow">
+                        Qarz olish
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class=" w-275 h-[550px] overflow-x-auto mx-auto border-2">
+                <table class="w-200 border-gray-200 rounded-xl shadow-lg">
+                    <thead class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white sticky top-0 z-10">
+                        <tr>
+                            <th class="w-[70px] px-4 py-3">ID</th>
+                            <th class="w-[90px] px-4 py-3">Client ID</th>
+                            <th class="w-[90px] px-4 py-3">User ID</th>
+                            <th class="w-[260px] px-4 py-3">Description</th>
+                            <th class="w-[80px] px-4 py-3 text-center">Amount</th>
+                            <th class="w-[140px] px-4 py-3">Created</th>
+                            <th class="w-[100px] px-4 py-3 text-right">Soldo</th>
+                            <th class="w-[120px] px-4 py-3 text-center">Status</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody id="depts" class="bg-white divide-y divide-gray-200">
+                    </tbody>
+                </table>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+    <script src="./depts.js"></script>
+    <script src="../app.js"></script>
+</body>
+
+</html>

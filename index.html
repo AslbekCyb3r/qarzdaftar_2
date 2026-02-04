@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qarz Daftari</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        /* Animatsiyali gradient fon */
+        body {
+            background: linear-gradient(-45deg, #6b5b95, #feb236, #d64161, #ff7b25);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Tepada pul belgilarini animatsiya qilish */
+        .dollar {
+            position: absolute;
+            font-size: 1.5rem;
+            color: gold;
+            animation: floatUp 5s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-600px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="relative flex items-center justify-center min-h-screen overflow-hidden">
+
+
+
+    <div class="w-full max-w-md rounded-3xl bg-white/70 backdrop-blur-md p-10 space-y-6 shadow-2xl">
+        <h1 class="text-5xl font-extrabold text-center text-gray-800 mb-8 animate-pulse">💰 Qarz Daftari 💰</h1>
+        <p class="text-center text-gray-700 mb-4">Oson va qulay tarzda qarzlarni kuzatib boring</p>
+        <button onclick="location.href='./login/login.html'"
+            class="w-full py-3 rounded-xl bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold shadow-lg hover:scale-105 transition transform duration-300">
+            Tizimga kirish
+        </button>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
