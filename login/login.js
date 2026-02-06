@@ -26,5 +26,6 @@ function login() {
         })
         .catch(err => {
             console.log("LOGIN ERROR:", err)
+            alert("Login yoki parol xato!")
         })
 }
